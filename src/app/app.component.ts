@@ -1,3 +1,4 @@
+import { UsersService } from './services/users.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class AppComponent implements OnInit {
  
   title = 'Consumo de API con servicio de Angular';
 
-  constructor(){
+  constructor(private usersService: UsersService){
     console.log('El componente se ha creado');
   }
 
