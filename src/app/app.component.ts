@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
  
   title = 'Consumo de API con servicio de Angular';
+  userList: any = [];
 
   constructor(private usersService: UsersService){
     console.log('El componente se ha creado');
@@ -16,6 +17,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log ('El componente se ha inicializado.')
-    this.usersService.getUsers().subscribe((response: any) => console.log(response));
+    this.usersService.getUsers().subscribe((response: any) => this.userList = response);
   }
 }
