@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'angular019-consumo-api';
+export class AppComponent implements OnInit {
+ 
+  title = 'Consumo de API con servicio de Angular';
+
+  constructor(){
+    console.log('El componente se ha creado');
+  }
+
+  ngOnInit(): void {
+    console.log ('El componente se ha inicializado.')
+  }
 }
